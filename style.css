@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+svg {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1000px;
+  max-height: 1000px;
+  background-color: black;
+}
+
+.triangle-wrapper {
+  transform: translate(50%, 50%);
+}
+
+.triangle {
+  --duration: 600ms;
+  opacity: 0;
+  animation-name: grow;
+  animation-duration: calc(var(--duration) * 24);
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.82, 0.04, 0.35, 0.99);
+  animation-delay: calc(var(--triangle-offset) * var(--duration));
+}
+
+.triangle polygon {
+  fill: none;
+  stroke: white;
+  stroke-width: 5px;
+  animation-name: spin, color-shift;
+  animation-duration: 14400ms, 12000ms;
+  animation-iteration-count: infinite, infinite;
+  animation-timing-function: linear, linear;
+  animation-delay: calc(var(--triangle-offset) * 400ms), calc(var(--triangle-offset) * 500ms);
+}
+
+.triangle-1 {
+  --triangle-offset: 0;
+}
+
+.triangle-2 {
+  --triangle-offset: 1;
+}
+
+.triangle-3 {
+  --triangle-offset: 2;
+}
+
+.triangle-4 {
+  --triangle-offset: 3;
+}
+
+.triangle-5 {
+  --triangle-offset: 4;
+}
+
+.triangle-6 {
+  --triangle-offset: 5;
+}
+
+.triangle-7 {
+  --triangle-offset: 6;
+}
+
+.triangle-8 {
+  --triangle-offset: 7;
+}
+
+.triangle-9 {
+  --triangle-offset: 8;
+}
+
+.triangle-10 {
+  --triangle-offset: 9;
+}
+
+.triangle-11 {
+  --triangle-offset: 10;
+}
+
+.triangle-12 {
+  --triangle-offset: 11;
+}
+
+.triangle-13 {
+  --triangle-offset: 12;
+}
+
+.triangle-14 {
+  --triangle-offset: 13;
+}
+
+.triangle-15 {
+  --triangle-offset: 14;
+}
+
+.triangle-16 {
+  --triangle-offset: 15;
+}
+
+.triangle-17 {
+  --triangle-offset: 16;
+}
+
+.triangle-18 {
+  --triangle-offset: 17;
+}
+
+.triangle-19 {
+  --triangle-offset: 18;
+}
+
+.triangle-20 {
+  --triangle-offset: 19;
+}
+
+.triangle-21 {
+  --triangle-offset: 20;
+}
+
+.triangle-22 {
+  --triangle-offset: 21;
+}
+
+.triangle-23 {
+  --triangle-offset: 22;
+}
+
+.triangle-24 {
+  --triangle-offset: 23;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes grow {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(10);
+  }
+}
+@keyframes color-shift {
+  from {
+    stroke: white;
+  }
+  15% {
+    stroke: red;
+  }
+  30% {
+    stroke: orange;
+  }
+  45% {
+    stroke: yellow;
+  }
+  60% {
+    stroke: green;
+  }
+  75% {
+    stroke: blue;
+  }
+  85% {
+    stroke: purple;
+  }
+  to {
+    stroke: white;
+  }
+}
